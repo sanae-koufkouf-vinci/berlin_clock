@@ -88,10 +88,26 @@ export class Main {
 
        // line 2
        berlinClockLine2(time){
-              if(time.getHours()%5===1)return("R---");
-              if(time.getHours()%5===2)return("RR--");
-              if(time.getHours()%5===3)return("RRR-"); 
-              if(time.getHours()%5===4)return("RRRR");    
+              if(this.isHourDividableBy5WithAnOffsetOf1(time))return("R---");
+              if(this.isHourDividableBy5WithAnOffsetOf2(time))return("RR--");
+              if(this.isHourDividableBy5WithAnOffsetOf3(time))return("RRR-"); 
+              if(this.isHourDividableBy5WithAnOffsetOf4(time))return("RRRR");    
               return("----");
+       }
+
+       isHourDividableBy5WithAnOffsetOf4(time) {
+              return time.getHours() % 5 === 4;
+       }
+
+       isHourDividableBy5WithAnOffsetOf3(time) {
+              return time.getHours() % 5 === 3;
+       }
+
+       isHourDividableBy5WithAnOffsetOf2(time) {
+              return time.getHours() % 5 === 2;
+       }
+
+       isHourDividableBy5WithAnOffsetOf1(time) {
+              return time.getHours() % 5 === 1;
        }
 }
