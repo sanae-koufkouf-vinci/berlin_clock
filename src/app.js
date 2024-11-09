@@ -85,4 +85,9 @@ export class Main {
        isBetween5And9Minutes(time) {
               return time.getMinutes() >= 5 && time.getMinutes() < 10;
        }
+
+       // line 2
+       berlinClockLine2(time){
+              return("----");
+       }
 }
