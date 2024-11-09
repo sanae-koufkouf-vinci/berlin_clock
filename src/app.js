@@ -91,7 +91,7 @@ export class Main {
               if(time.getHours()%5===1)return("R---");
               if(time.getHours()%5===2)return("RR--");
               if(time.getHours()%5===3)return("RRR-"); 
-              if(time.getHours()===4||time.getHours()===9)return("RRRR");    
+              if(time.getHours()%5===4)return("RRRR");    
               return("----");
        }
 }
