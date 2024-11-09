@@ -29,7 +29,7 @@ export class Main {
 
        berlinClockLine3(time){
         if(time.getMinutes()>=5 && time.getMinutes()<10)return("J----------");
-        if(time.getMinutes()===10)return("JJ---------");
+        if(time.getMinutes()>=10 && time.getMinutes()<15 )return("JJ---------");
               return("-----------");
        }
 }
