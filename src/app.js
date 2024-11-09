@@ -89,7 +89,7 @@ export class Main {
        // line 2
        berlinClockLine2(time){
               if(time.getHours()===1||time.getHours()===6)return("R---");
-              if(time.getHours()===2)return("RR--");
+              if(time.getHours()===2||time.getHours()===7)return("RR--");
               if(time.getHours()===3)return("RRR-"); 
               if(time.getHours()===4)return("RRRR");    
               return("----");
