@@ -37,7 +37,8 @@ export class Main {
         if(time.getMinutes()>=35 && time.getMinutes()<40)return("JJRJJRJ----");
         if(time.getMinutes()>=40 && time.getMinutes()<45)return("JJRJJRJJ---"); 
         if(time.getMinutes()>=45 && time.getMinutes()<50)return("JJRJJRJJR--");
-        if(time.getMinutes()>=50 && time.getMinutes()<55)return("JJRJJRJJRJ-");    
+        if(time.getMinutes()>=50 && time.getMinutes()<55)return("JJRJJRJJRJ-"); 
+        if(time.getMinutes()===55)return("JJRJJRJJRJJ");   
               return("-----------");
        }
 }
