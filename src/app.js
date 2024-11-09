@@ -25,9 +25,10 @@ export class Main {
               return time.getMinutes() % 5 === 1;
        }
 
-       /////////////////////////////////////////////////
+       // line 3
 
        berlinClockLine3(time){
+        if(time.getMinutes()===5)return("J----------")
               return("-----------");
        }
 }
