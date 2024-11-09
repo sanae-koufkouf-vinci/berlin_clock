@@ -33,6 +33,7 @@ export class Main {
         if(time.getMinutes()>=15 && time.getMinutes()<20)return("JJR--------");
         if(time.getMinutes()>=20 && time.getMinutes()<25)return("JJRJ-------");
         if(time.getMinutes()>=25 && time.getMinutes()<30)return("JJRJJ------");
+        if(time.getMinutes()===30)return("JJRJJR-----");
 
               return("-----------");
        }
