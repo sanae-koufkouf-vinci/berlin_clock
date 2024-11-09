@@ -88,6 +88,7 @@ export class Main {
 
        // line 2
        berlinClockLine2(time){
+         if(time.getHours()===1)return("R---");     
               return("----");
        }
 }
