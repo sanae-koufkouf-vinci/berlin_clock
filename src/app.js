@@ -114,11 +114,29 @@ export class Main {
    // line 1
 
    berlinClockLine1(time){
-    if(time.getHours()>=5 && time.getHours()<10)return("R---");
-    if(time.getHours()>=10 && time.getHours()<15)return("RR--");
-    if(time.getHours()>=15 && time.getHours()<20)return("RRR-");
-    if(time.getHours()>=20 && time.getHours()<25)return("RRRR");
+    if(this.isBetween5And9Hours(time))return("R---");
+    if(this.isBetween10And14Hours(time))return("RR--");
+    if(this.isBetween15And19Hours(time))return("RRR-");
+    if(this.isBetween20And23Hours(time))return("RRRR");
     return("----");
 
    }
+
+
+
+    isBetween20And23Hours(time) {
+        return time.getHours() >= 20 && time.getHours() < 24;
+    }
+
+    isBetween15And19Hours(time) {
+        return time.getHours() >= 15 && time.getHours() < 20;
+    }
+
+    isBetween10And14Hours(time) {
+        return time.getHours() >= 10 && time.getHours() < 15;
+    }
+
+    isBetween5And9Hours(time) {
+        return time.getHours() >= 5 && time.getHours() < 10;
+    }
 }
