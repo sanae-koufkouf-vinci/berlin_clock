@@ -609,4 +609,13 @@ describe("secondsButton function should return the seconds button of the Berlin 
 
         expect(result).toBe("R");
     });
+
+    it("secondsButton should return - when given time with seconds = 1", function() {
+        const date = new Date();
+        date.setSeconds(1);
+
+        const result = main.secondsButton(date);
+
+        expect(result).toBe("-");
+    });
 });
