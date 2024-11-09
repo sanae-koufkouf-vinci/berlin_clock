@@ -159,7 +159,15 @@ describe("berlinClockLine3 function should return the 5-minutes line of the Berl
         const result = main.berlinClockLine3(date);
 
         expect(result).toBe("J----------");
-    })
+    });
 
-})
+    it("berlinClockLine3 should return J---------- when given time with minutes = 6", function() {
+        const date = new Date();
+        date.setMinutes(6);
+
+        const result = main.berlinClockLine3(date);
+
+        expect(result).toBe("J----------");
+    });
+});
  
