@@ -17,6 +17,13 @@ describe("berlinClock function should return the time in Berlin Clock ", functio
         const result = main.berlinClock(date);
         expect(result).toBe("J---");
     });
+    
+    it("berlinClock should return JJ-- when given time with minutes = 2 ", function() {
+        const date = new Date();
+        date.setMinutes(2);
+        const result = main.berlinClock(date);
+        expect(result).toBe("JJ--");
+    });
 
     
 });
