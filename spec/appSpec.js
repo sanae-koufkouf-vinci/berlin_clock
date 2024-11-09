@@ -646,3 +646,19 @@ describe("secondsButton function should return the seconds button of the Berlin 
         expect(result).toBe("-");
     });
 });
+
+describe("berlinClock function should return the Berlin Clock", function(){ 
+    const main = new Main();
+
+    it("berlinClock should return R\n----\n----\n-----------\n---- when given time midnight", function() {
+        const date = new Date();
+        date.setSeconds(0);
+        date.setMinutes(0);
+        date.setHours(0);
+
+        const result = main.fullBerlinClock(date);
+
+        expect(result).toBe("R\n----\n----\n-----------\n----");
+    });
+
+});

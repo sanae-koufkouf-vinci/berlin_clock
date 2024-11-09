@@ -1,5 +1,10 @@
 export class Main {
 
+       fullBerlinClock(time) {
+          return this.secondsButton(time)+"\n"+this.berlinClockLine1(time)+"\n"+this.berlinClockLine2(time)+"\n"+this.berlinClockLine3(time)+"\n"+this.berlinClockLine4(time);    
+       }
+
+       // line 4
        berlinClockLine4(time){
         if(this.isDividableBy5WithAnOffsetOf4(time))return("JJJJ");
         if(this.isDividableBy5WithAnOffsetOf3(time))return("JJJ-");
