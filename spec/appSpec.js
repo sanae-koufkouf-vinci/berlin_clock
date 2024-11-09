@@ -383,6 +383,15 @@ describe("berlinClockLine2 function should return the single hours line of the B
         expect(result).toBe("R---");
     });
 
+    it("berlinClockLine2 should return RR-- when given time with hours = 2", function() {
+        const date = new Date();
+        date.setHours(2);
+
+        const result = main.berlinClockLine2(date);
+
+        expect(result).toBe("RR--");
+    });
+
 
 });
  
