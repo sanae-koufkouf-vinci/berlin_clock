@@ -178,5 +178,14 @@ describe("berlinClockLine3 function should return the 5-minutes line of the Berl
 
         expect(result).toBe("J----------");
     });
+
+    it("berlinClockLine3 should return JJ--------- when given time with minutes = 10", function() {
+        const date = new Date();
+        date.setMinutes(10);
+
+        const result = main.berlinClockLine3(date);
+
+        expect(result).toBe("JJ---------");
+    });
 });
  

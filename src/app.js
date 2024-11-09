@@ -28,7 +28,8 @@ export class Main {
        // line 3
 
        berlinClockLine3(time){
-        if(time.getMinutes()>=5 && time.getMinutes()<10)return("J----------")
+        if(time.getMinutes()>=5 && time.getMinutes()<10)return("J----------");
+        if(time.getMinutes()===10)return("JJ---------");
               return("-----------");
        }
 }
