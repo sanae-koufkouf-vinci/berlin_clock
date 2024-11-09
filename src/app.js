@@ -1,6 +1,6 @@
 export class Main {
 
-       berlinClock(time){
+       berlinClockLine4(time){
         if(this.isDividableBy5WithAnOffsetOf4(time))return("JJJJ");
         if(this.isDividableBy5WithAnOffsetOf3(time))return("JJJ-");
         if(this.isDividableBy5WithAnOffsetOf2(time))return("JJ--");
