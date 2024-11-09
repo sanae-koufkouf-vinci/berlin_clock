@@ -144,7 +144,11 @@ export class Main {
     // seconds button
 
     secondsButton(time){
-        if(time.getSeconds()%2===1)return("-");
+        if(this.isSecondOdd(time))return("-");
         return("R");
+    }
+
+    isSecondOdd(time) {
+        return time.getSeconds() % 2 === 1;
     }
 }
