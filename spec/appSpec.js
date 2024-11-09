@@ -594,5 +594,19 @@ describe("berlinClockLine1 function should return the 5-hours line of the Berlin
 
         expect(result).toBe("RRRR");
     });
+
+    
 });
  
+describe("secondsButton function should return the seconds button of the Berlin Clock", function(){ 
+    const main = new Main();
+
+    it("secondsButton should return R when given time with seconds = 0", function() {
+        const date = new Date();
+        date.setSeconds(0);
+
+        const result = main.secondsButton(date);
+
+        expect(result).toBe("R");
+    });
+});

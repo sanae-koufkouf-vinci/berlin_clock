@@ -139,4 +139,11 @@ export class Main {
     isBetween5And9Hours(time) {
         return time.getHours() >= 5 && time.getHours() < 10;
     }
+
+
+    // seconds button
+
+    secondsButton(time){
+        return("R");
+    }
 }
