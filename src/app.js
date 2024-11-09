@@ -1,11 +1,27 @@
 export class Main {
 
        berlinClock(time){
-        if(time.getMinutes()%5 === 4)return("JJJJ");
-        if(time.getMinutes()%5 === 3)return("JJJ-");
-        if(time.getMinutes()%5 === 2)return("JJ--");
-        if(time.getMinutes()%5 === 1)return("J---");
+        if(this.isDividableBy5WithAnOffsetOf4(time))return("JJJJ");
+        if(this.isDividableBy5WithAnOffsetOf3(time))return("JJJ-");
+        if(this.isDividableBy5WithAnOffsetOf2(time))return("JJ--");
+        if(this.isDividableBy5WithAnOffsetOf1(time))return("J---");
         return("----");
        }
 
+
+       isDividableBy5WithAnOffsetOf4(time) {
+              return time.getMinutes() % 5 === 4;
+       }
+
+       isDividableBy5WithAnOffsetOf3(time) {
+              return time.getMinutes() % 5 === 3;
+       }
+
+       isDividableBy5WithAnOffsetOf2(time) {
+              return time.getMinutes() % 5 === 2;
+       }
+
+       isDividableBy5WithAnOffsetOf1(time) {
+              return time.getMinutes() % 5 === 1;
+       }
 }
