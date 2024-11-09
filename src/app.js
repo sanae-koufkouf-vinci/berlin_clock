@@ -115,6 +115,7 @@ export class Main {
 
    berlinClockLine1(time){
     if(time.getHours()>=5 && time.getHours()<10)return("R---");
+    if(time.getHours()===10)return("RR--");
     return("----");
 
    }

@@ -540,5 +540,14 @@ describe("berlinClockLine1 function should return the 5-hours line of the Berlin
 
         expect(result).toBe("R---");
     });
+
+    it("berlinClockLine1 should return RR-- when given time with hours = 10", function() {
+        const date = new Date();
+        date.setHours(10);
+
+        const result = main.berlinClockLine1(date);
+
+        expect(result).toBe("RR--");
+    });
 });
  
