@@ -24,4 +24,10 @@ export class Main {
        isDividableBy5WithAnOffsetOf1(time) {
               return time.getMinutes() % 5 === 1;
        }
+
+       /////////////////////////////////////////////////
+
+       berlinClockLine3(time){
+              return("-----------");
+       }
 }

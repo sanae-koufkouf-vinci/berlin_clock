@@ -1,6 +1,6 @@
 import { Main } from '../src/app.js';
 
-describe("berlinClockLine4 function should return the single minutes in Berlin Clock ", function() {
+describe("berlinClockLine4 function should return the single minutes line of the Berlin Clock ", function() {
     const main = new Main();
 
     it("berlinClockLine4 should return ---- when given time with minutes = 0 ", function() {
@@ -140,5 +140,17 @@ describe("berlinClockLine4 function should return the single minutes in Berlin C
     });
 });
 
+describe("berlinClockLine3 function should return the 5-minutes line of the Berlin Clock", function(){
+    const main = new Main();
 
+    it("berlinClockLine3 should return ----------- when given time with minutes = 0", function() {
+        const date = new Date();
+        date.setMinutes(0);
+
+        const result = main.berlinClockLine3(date);
+
+        expect(result).toBe("-----------");
+    })
+
+})
  
