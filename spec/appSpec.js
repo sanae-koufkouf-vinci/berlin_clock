@@ -39,6 +39,13 @@ describe("berlinClock function should return the time in Berlin Clock ", functio
         expect(result).toBe("JJJJ");
     });
 
+    it("berlinClock should return ---- when given time with minutes = 5 ", function() {
+        const date = new Date();
+        date.setMinutes(5);
+        const result = main.berlinClock(date);
+        expect(result).toBe("----");
+    });
+
     
 });
  
