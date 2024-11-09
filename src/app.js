@@ -110,4 +110,11 @@ export class Main {
        isHourDividableBy5WithAnOffsetOf1(time) {
               return time.getHours() % 5 === 1;
        }
+
+   // line 1
+
+   berlinClockLine1(time){
+    return("----");
+
+   }
 }

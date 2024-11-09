@@ -499,5 +499,19 @@ describe("berlinClockLine2 function should return the single hours line of the B
 
         expect(result).toBe("RRRR");
     });
+
+});
+
+describe("berlinClockLine1 function should return the 5-hours line of the Berlin Clock", function(){ 
+    const main = new Main();
+
+    it("berlinClockLine1 should return ---- when given time with hours = 0", function() {
+        const date = new Date();
+        date.setHours(0);
+
+        const result = main.berlinClockLine1(date);
+
+        expect(result).toBe("----");
+    });
 });
  
