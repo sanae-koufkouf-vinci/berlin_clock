@@ -672,4 +672,15 @@ describe("berlinClock function should return the Berlin Clock", function(){
         expect(result).toBe("-\n----\n----\n-----------\nJ---");
     });
 
+    it("berlinClock should return R\nRR--\nRRRR\nJJRJJRJJRJ-\nJJJ- when given time 14:53:12", function() {
+        const date = new Date();
+        date.setSeconds(12);
+        date.setMinutes(53);
+        date.setHours(14);
+
+        const result = main.fullBerlinClock(date);
+
+        expect(result).toBe("R\nRR--\nRRRR\nJJRJJRJJRJ-\nJJJ-");
+    });
+
 });
